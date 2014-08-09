@@ -1,0 +1,118 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AndQuery	query.cc	/^    AndQuery(const Query &left, const Query &right):$/;"	kind:function	class:AndQuery	file:	access:private	signature:(const Query &left, const Query &right)
+AndQuery	query.cc	/^class AndQuery: public BinaryQuery {$/;"	kind:class	file:	inherits:BinaryQuery
+AndQuery::AndQuery	query.cc	/^    AndQuery(const Query &left, const Query &right):$/;"	kind:function	class:AndQuery	file:	access:private	signature:(const Query &left, const Query &right)
+AndQuery::eval	query.cc	/^    QueryResult eval(const TextQuery&) const;$/;"	kind:prototype	class:AndQuery	file:	access:private	signature:(const TextQuery&) const
+AndQuery::eval	query.cc	/^AndQuery::eval(const TextQuery& text) const$/;"	kind:function	class:AndQuery	signature:(const TextQuery& text) const
+AndQuery::operator &	query.cc	/^    friend Query operator&(const Query&, const Query&);$/;"	kind:prototype	class:AndQuery	file:	access:friend	signature:(const Query&, const Query&)
+BinaryQuery	query.cc	/^    BinaryQuery(const Query &l, const Query &r, std::string s):$/;"	kind:function	class:BinaryQuery	access:protected	signature:(const Query &l, const Query &r, std::string s)
+BinaryQuery	query.cc	/^class BinaryQuery: public Query_base {$/;"	kind:class	file:	inherits:Query_base
+BinaryQuery::BinaryQuery	query.cc	/^    BinaryQuery(const Query &l, const Query &r, std::string s):$/;"	kind:function	class:BinaryQuery	access:protected	signature:(const Query &l, const Query &r, std::string s)
+BinaryQuery::lhs	query.cc	/^    Query lhs, rhs;$/;"	kind:member	class:BinaryQuery	file:	access:protected
+BinaryQuery::opSym	query.cc	/^    std::string opSym;$/;"	kind:member	class:BinaryQuery	file:	access:protected
+BinaryQuery::rep	query.cc	/^    std::string rep() const { return "(" + lhs.rep() + " "$/;"	kind:function	class:BinaryQuery	access:protected	signature:() const
+BinaryQuery::rhs	query.cc	/^    Query lhs, rhs;$/;"	kind:member	class:BinaryQuery	file:	access:protected
+NotQuery	query.cc	/^    NotQuery(const Query &q): query(q) { }$/;"	kind:function	class:NotQuery	file:	access:private	signature:(const Query &q)
+NotQuery	query.cc	/^class NotQuery: public Query_base {$/;"	kind:class	file:	inherits:Query_base
+NotQuery::NotQuery	query.cc	/^    NotQuery(const Query &q): query(q) { }$/;"	kind:function	class:NotQuery	file:	access:private	signature:(const Query &q)
+NotQuery::eval	query.cc	/^    QueryResult eval(const TextQuery&) const;$/;"	kind:prototype	class:NotQuery	file:	access:private	signature:(const TextQuery&) const
+NotQuery::operator ~	query.cc	/^    friend Query operator~(const Query &);$/;"	kind:prototype	class:NotQuery	file:	access:friend	signature:(const Query &)
+NotQuery::query	query.cc	/^    Query query;$/;"	kind:member	class:NotQuery	file:	access:private
+NotQuery::rep	query.cc	/^    std::string rep() const { return "~(" + query.rep() + ")"; }$/;"	kind:function	class:NotQuery	file:	access:private	signature:() const
+OrQuery	query.cc	/^    OrQuery(const Query &left, const Query &right):$/;"	kind:function	class:OrQuery	file:	access:private	signature:(const Query &left, const Query &right)
+OrQuery	query.cc	/^class OrQuery: public BinaryQuery {$/;"	kind:class	file:	inherits:BinaryQuery
+OrQuery::OrQuery	query.cc	/^    OrQuery(const Query &left, const Query &right):$/;"	kind:function	class:OrQuery	file:	access:private	signature:(const Query &left, const Query &right)
+OrQuery::eval	query.cc	/^    QueryResult eval(const TextQuery&) const;$/;"	kind:prototype	class:OrQuery	file:	access:private	signature:(const TextQuery&) const
+OrQuery::eval	query.cc	/^OrQuery::eval(const TextQuery& text) const$/;"	kind:function	class:OrQuery	signature:(const TextQuery& text) const
+OrQuery::operator |	query.cc	/^    friend Query operator|(const Query&, const Query&);$/;"	kind:prototype	class:OrQuery	file:	access:friend	signature:(const Query&, const Query&)
+Query	query.cc	/^    Query(const std::string&);$/;"	kind:prototype	class:Query	file:	access:public	signature:(const std::string&)
+Query	query.cc	/^    Query(std::shared_ptr<Query_base> query): q(query) { }$/;"	kind:function	class:Query	file:	access:private	signature:(std::shared_ptr<Query_base> query)
+Query	query.cc	/^    friend class Query;$/;"	kind:externvar	file:
+Query	query.cc	/^Query::Query(const std::string &s): q(new WordQuery(s)) { }$/;"	kind:function	class:Query	signature:(const std::string &s)
+Query	query.cc	/^class Query {$/;"	kind:class	file:
+Query::Query	query.cc	/^    Query(const std::string&);$/;"	kind:prototype	class:Query	file:	access:public	signature:(const std::string&)
+Query::Query	query.cc	/^    Query(std::shared_ptr<Query_base> query): q(query) { }$/;"	kind:function	class:Query	file:	access:private	signature:(std::shared_ptr<Query_base> query)
+Query::Query	query.cc	/^Query::Query(const std::string &s): q(new WordQuery(s)) { }$/;"	kind:function	class:Query	signature:(const std::string &s)
+Query::eval	query.cc	/^    QueryResult eval(const TextQuery &t) const$/;"	kind:function	class:Query	access:public	signature:(const TextQuery &t) const
+Query::operator &	query.cc	/^    friend Query operator&(const Query &, const Query &);$/;"	kind:prototype	class:Query	file:	access:friend	signature:(const Query &, const Query &)
+Query::operator |	query.cc	/^    friend Query operator|(const Query &, const Query &);$/;"	kind:prototype	class:Query	file:	access:friend	signature:(const Query &, const Query &)
+Query::operator ~	query.cc	/^    friend Query operator~(const Query &);$/;"	kind:prototype	class:Query	file:	access:friend	signature:(const Query &)
+Query::q	query.cc	/^    std::shared_ptr<Query_base> q;$/;"	kind:member	class:Query	file:	access:private
+Query::rep	query.cc	/^    std::string rep() const { return q->rep() }$/;"	kind:function	class:Query	access:public	signature:() const
+QueryResult	textquery.cc	/^    QueryResult(string s,$/;"	kind:function	class:QueryResult	access:public	signature:(string s, shared_ptr<set<line_no>> p, shared_ptr<vector<string>> f)
+QueryResult	textquery.cc	/^class QueryResult {$/;"	kind:class	file:
+QueryResult	textquery.cc	/^class QueryResult;$/;"	kind:externvar	file:
+QueryResult::QueryResult	textquery.cc	/^    QueryResult(string s,$/;"	kind:function	class:QueryResult	access:public	signature:(string s, shared_ptr<set<line_no>> p, shared_ptr<vector<string>> f)
+QueryResult::begin	textquery.cc	/^    iter begin() { return lines->cbegin(); }$/;"	kind:function	class:QueryResult	access:public	signature:()
+QueryResult::end	textquery.cc	/^    iter end() { return lines->cend(); }$/;"	kind:function	class:QueryResult	access:public	signature:()
+QueryResult::file	textquery.cc	/^    shared_ptr<vector<string>> file;$/;"	kind:member	class:QueryResult	file:	access:private
+QueryResult::get_file	textquery.cc	/^    shared_ptr<vector<string>> get_file() { return file; }$/;"	kind:function	class:QueryResult	access:public	signature:()
+QueryResult::lines	textquery.cc	/^    shared_ptr<set<line_no>> lines;$/;"	kind:member	class:QueryResult	file:	access:private
+QueryResult::print	textquery.cc	/^    friend ostream& print(ostream&, const QueryResult&);$/;"	kind:prototype	class:QueryResult	file:	access:friend	signature:(ostream&, const QueryResult&)
+QueryResult::sought	textquery.cc	/^    string sought;$/;"	kind:member	class:QueryResult	file:	access:private
+Query_base	query.cc	/^class Query_base {$/;"	kind:class	file:
+Query_base::Query	query.cc	/^    friend class Query;$/;"	kind:externvar	file:
+Query_base::eval	query.cc	/^    virtual QueryResult eval(const TextQuery&) const = 0;$/;"	kind:prototype	class:Query_base	file:	access:private	signature:(const TextQuery&) const
+Query_base::rep	query.cc	/^    virtual std::string rep() const = 0;$/;"	kind:prototype	class:Query_base	file:	access:private	signature:() const
+TextQuery	textquery.cc	/^TextQuery::TextQuery(ifstream &is): file(new vector<string>)$/;"	kind:function	class:TextQuery	signature:(ifstream &is)
+TextQuery	textquery.cc	/^class TextQuery {$/;"	kind:class	file:
+TextQuery::TextQuery	textquery.cc	/^TextQuery::TextQuery(ifstream &is): file(new vector<string>)$/;"	kind:function	class:TextQuery	signature:(ifstream &is)
+TextQuery::file	textquery.cc	/^    shared_ptr<vector<string>> file;$/;"	kind:member	class:TextQuery	file:	access:private
+TextQuery::query	textquery.cc	/^    QueryResult query(const string&) const;$/;"	kind:prototype	class:TextQuery	file:	access:public	signature:(const string&) const
+TextQuery::query	textquery.cc	/^TextQuery::query(const string &sought) const$/;"	kind:function	class:TextQuery	signature:(const string &sought) const
+TextQuery::wm	textquery.cc	/^             shared_ptr<set<line_no>>> wm;$/;"	kind:member	class:TextQuery	file:	access:private
+WordQuery	query.cc	/^    WordQuery(const std::string &s): query_word(s) { }$/;"	kind:function	class:WordQuery	file:	access:private	signature:(const std::string &s)
+WordQuery	query.cc	/^class WordQuery: public Query_base {$/;"	kind:class	file:	inherits:Query_base
+WordQuery::Query	query.cc	/^    friend class Query;$/;"	kind:externvar	file:
+WordQuery::WordQuery	query.cc	/^    WordQuery(const std::string &s): query_word(s) { }$/;"	kind:function	class:WordQuery	file:	access:private	signature:(const std::string &s)
+WordQuery::eval	query.cc	/^    QueryResult eval(const TextQuery &t) const$/;"	kind:function	class:WordQuery	file:	access:private	signature:(const TextQuery &t) const
+WordQuery::query_word	query.cc	/^    std::string query_word;$/;"	kind:member	class:WordQuery	file:	access:private
+WordQuery::rep	query.cc	/^    std::string rep() const { return query_word; }$/;"	kind:function	class:WordQuery	file:	access:private	signature:() const
+begin	textquery.cc	/^    iter begin() { return lines->cbegin(); }$/;"	kind:function	class:QueryResult	access:public	signature:()
+end	textquery.cc	/^    iter end() { return lines->cend(); }$/;"	kind:function	class:QueryResult	access:public	signature:()
+eval	query.cc	/^    QueryResult eval(const TextQuery &t) const$/;"	kind:function	class:Query	access:public	signature:(const TextQuery &t) const
+eval	query.cc	/^    QueryResult eval(const TextQuery &t) const$/;"	kind:function	class:WordQuery	file:	access:private	signature:(const TextQuery &t) const
+eval	query.cc	/^    QueryResult eval(const TextQuery&) const;$/;"	kind:prototype	class:AndQuery	file:	access:private	signature:(const TextQuery&) const
+eval	query.cc	/^    QueryResult eval(const TextQuery&) const;$/;"	kind:prototype	class:NotQuery	file:	access:private	signature:(const TextQuery&) const
+eval	query.cc	/^    QueryResult eval(const TextQuery&) const;$/;"	kind:prototype	class:OrQuery	file:	access:private	signature:(const TextQuery&) const
+eval	query.cc	/^    virtual QueryResult eval(const TextQuery&) const = 0;$/;"	kind:prototype	class:Query_base	file:	access:private	signature:(const TextQuery&) const
+eval	query.cc	/^AndQuery::eval(const TextQuery& text) const$/;"	kind:function	class:AndQuery	signature:(const TextQuery& text) const
+eval	query.cc	/^OrQuery::eval(const TextQuery& text) const$/;"	kind:function	class:OrQuery	signature:(const TextQuery& text) const
+file	textquery.cc	/^    shared_ptr<vector<string>> file;$/;"	kind:member	class:QueryResult	file:	access:private
+file	textquery.cc	/^    shared_ptr<vector<string>> file;$/;"	kind:member	class:TextQuery	file:	access:private
+get_file	textquery.cc	/^    shared_ptr<vector<string>> get_file() { return file; }$/;"	kind:function	class:QueryResult	access:public	signature:()
+lhs	query.cc	/^    Query lhs, rhs;$/;"	kind:member	class:BinaryQuery	file:	access:protected
+lines	textquery.cc	/^    shared_ptr<set<line_no>> lines;$/;"	kind:member	class:QueryResult	file:	access:private
+make_plural	textquery.cc	/^make_plural(size_t ctr, const string &word, const string &ending)$/;"	kind:function	file:	signature:(size_t ctr, const string &word, const string &ending)
+opSym	query.cc	/^    std::string opSym;$/;"	kind:member	class:BinaryQuery	file:	access:protected
+operator &	query.cc	/^    friend Query operator&(const Query &, const Query &);$/;"	kind:prototype	class:Query	file:	access:friend	signature:(const Query &, const Query &)
+operator &	query.cc	/^    friend Query operator&(const Query&, const Query&);$/;"	kind:prototype	class:AndQuery	file:	access:friend	signature:(const Query&, const Query&)
+operator &	query.cc	/^inline Query operator&(const Query &lhs, const Query &rhs)$/;"	kind:function	signature:(const Query &lhs, const Query &rhs)
+operator <<	query.cc	/^operator<<(std::ostream &os, const Query &query)$/;"	kind:function	signature:(std::ostream &os, const Query &query)
+operator |	query.cc	/^    friend Query operator|(const Query &, const Query &);$/;"	kind:prototype	class:Query	file:	access:friend	signature:(const Query &, const Query &)
+operator |	query.cc	/^    friend Query operator|(const Query&, const Query&);$/;"	kind:prototype	class:OrQuery	file:	access:friend	signature:(const Query&, const Query&)
+operator |	query.cc	/^inline Query operator|(const Query &lhs, const Query &rhs)$/;"	kind:function	signature:(const Query &lhs, const Query &rhs)
+operator ~	query.cc	/^    friend Query operator~(const Query &);$/;"	kind:prototype	class:NotQuery	file:	access:friend	signature:(const Query &)
+operator ~	query.cc	/^    friend Query operator~(const Query &);$/;"	kind:prototype	class:Query	file:	access:friend	signature:(const Query &)
+operator ~	query.cc	/^inline Query operator~(const Query &operand)$/;"	kind:function	signature:(const Query &operand)
+print	textquery.cc	/^    friend ostream& print(ostream&, const QueryResult&);$/;"	kind:prototype	class:QueryResult	file:	access:friend	signature:(ostream&, const QueryResult&)
+print	textquery.cc	/^ostream& print(ostream &os, const QueryResult &qr)$/;"	kind:function	signature:(ostream &os, const QueryResult &qr)
+q	query.cc	/^    std::shared_ptr<Query_base> q;$/;"	kind:member	class:Query	file:	access:private
+query	query.cc	/^    Query query;$/;"	kind:member	class:NotQuery	file:	access:private
+query	textquery.cc	/^    QueryResult query(const string&) const;$/;"	kind:prototype	class:TextQuery	file:	access:public	signature:(const string&) const
+query	textquery.cc	/^TextQuery::query(const string &sought) const$/;"	kind:function	class:TextQuery	signature:(const string &sought) const
+query_word	query.cc	/^    std::string query_word;$/;"	kind:member	class:WordQuery	file:	access:private
+rep	query.cc	/^    std::string rep() const { return "(" + lhs.rep() + " "$/;"	kind:function	class:BinaryQuery	access:protected	signature:() const
+rep	query.cc	/^    std::string rep() const { return "~(" + query.rep() + ")"; }$/;"	kind:function	class:NotQuery	file:	access:private	signature:() const
+rep	query.cc	/^    std::string rep() const { return q->rep() }$/;"	kind:function	class:Query	access:public	signature:() const
+rep	query.cc	/^    std::string rep() const { return query_word; }$/;"	kind:function	class:WordQuery	file:	access:private	signature:() const
+rep	query.cc	/^    virtual std::string rep() const = 0;$/;"	kind:prototype	class:Query_base	file:	access:private	signature:() const
+rhs	query.cc	/^    Query lhs, rhs;$/;"	kind:member	class:BinaryQuery	file:	access:protected
+runQueries	textquery.cc	/^void runQueries(ifstream &infile)$/;"	kind:function	signature:(ifstream &infile)
+sought	textquery.cc	/^    string sought;$/;"	kind:member	class:QueryResult	file:	access:private
+wm	textquery.cc	/^             shared_ptr<set<line_no>>> wm;$/;"	kind:member	class:TextQuery	file:	access:private
