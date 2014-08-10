@@ -44,4 +44,5 @@ int main()
 	Foo x;
 	Foo y(x);            // copy constructor; x is an lvalue
 	Foo z(std::move(x)); // copy constructor, because there is no move constructor
+  Foo f = x;           // copy constructor, because there is no move constructor
 }

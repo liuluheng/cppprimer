@@ -8,7 +8,7 @@ OBJECTS = FolderMain.exe HasPtrUseCount.exe \
 # defines general rules for making .o and .exe files
 include ../GNU_makefile_template
 
-LOCFLAGS = -I../1 -I../7
+LOCFLAGS = -I../1 -I../7 #-stdlib=libc++
 
 Folder.o FolderMain.o: Folder.h
 StrFolder.o StrFolderMain.o: StrFolder.h String.h
