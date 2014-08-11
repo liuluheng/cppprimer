@@ -49,7 +49,7 @@ int main()
 	// dereferencing pref yields i, the int to which p2 points; 
 	*pref = 0;  // changes i to 0
 	
-	std::cout << i << " " << *pref << std::endl;
+	std::cout << i << " " << *pref << " " << *p2 << std::endl;
 
 	return 0;
 }

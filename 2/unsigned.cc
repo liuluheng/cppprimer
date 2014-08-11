@@ -41,13 +41,17 @@ int main()
 
 	u = 42;
 	i = 10;
+  std::cout << "******\n";
 	std::cout << i - u << std::endl;
+  std::cout << "******\n";
 	std::cout << u - i << std::endl;
 
 	u = 10;
 	i = -42;
 	std::cout << i + i << std::endl;  // prints -84
+  std::cout << "******\n";
 	std::cout << u + i << std::endl;  // if 32-bit ints, prints 4294967264
+  std::cout << "******\n";
 
 	i = 10;
 	std::cout << "good" << std::endl;
