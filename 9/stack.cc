@@ -25,7 +25,7 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+ */ 
 
 #include <cstddef>
 using std::size_t;
@@ -43,19 +43,19 @@ bool process(int);
 
 int main()
 {
-	stack<int> intStack;  // empty stack
+  stack<int> intStack;  // empty stack
 
-	// fill up the stack
-	for (size_t ix = 0; ix != 10; ++ix)
-    	intStack.push(ix);   // intStack holds 0 . . . 9 inclusive
+  // fill up the stack
+  for (size_t ix = 0; ix != 10; ++ix)
+    intStack.push(ix);   // intStack holds 0 . . . 9 inclusive
 
-	// while there are still values in intStack
-	while (!intStack.empty()) {
-    	int value = intStack.top();
-    	// code that uses value
-		cout << value << endl;
-    	intStack.pop(); // pop the top element, and repeat
-	}
+  // while there are still values in intStack
+  while (!intStack.empty()) {
+    int value = intStack.top();
+    // code that uses value
+    cout << value << endl;
+    intStack.pop(); // pop the top element, and repeat
+  }
 
-	return 0;
+  return 0;
 }

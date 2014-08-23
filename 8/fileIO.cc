@@ -25,7 +25,7 @@
  * 	One Lake Street
  * 	Upper Saddle River, NJ  07458
  * 	Fax: (201) 236-3290
-*/ 
+ */ 
 
 #include <iostream>
 using std::cerr; using std::cout; using std::endl;
@@ -41,32 +41,32 @@ using std::runtime_error;
 
 void process(ifstream &is)
 {
-	string s;
-	while (is >> s)
-		cout << s << endl;
+  string s;
+  while (is >> s)
+    cout << s << endl;
 }
 
 int main(int argc, char* argv[])
 {
-	// for each file passed to the program
-	for (auto p = argv + 1; p != argv + argc; ++p) {
-	    ifstream input(*p);   // create input and open the file
-	    if (input) {          // if the file is ok, ``process'' this file
-	        process(input);
-		} else
-	        cerr << "couldn't open: " + string(*p);
-	} // input goes out of scope and is destroyed on each iteration
-	
-	auto p = argv + 1, end = argv + argc;
-	
-	ifstream input;           
-	while (p != end) {        // for each file passed to the program
-		input.open(*p);       // open the file, automatically clears the stream 
-	    if (input) {          // if the file is ok, read and ``process'' the input
-	        	process(input);
-		} else
-			cerr << "couldn't open: " + string(*p);
-	    input.close();        // close file when we're done with it
-	    ++p;                  // increment pointer to get next file
-	}
+  // for each file passed to the program
+  for (auto p = argv + 1; p != argv + argc; ++p) {
+    ifstream input(*p);   // create input and open the file
+    if (input) {          // if the file is ok, ``process'' this file
+      process(input);
+    } else
+      cerr << "couldn't open: " + string(*p);
+  } // input goes out of scope and is destroyed on each iteration
+
+  auto p = argv + 1, end = argv + argc;
+
+  ifstream input;           
+  while (p != end) {        // for each file passed to the program
+    input.open(*p);       // open the file, automatically clears the stream 
+    if (input) {          // if the file is ok, read and ``process'' the input
+      process(input);
+    } else
+      cerr << "couldn't open: " + string(*p);
+    input.close();        // close file when we're done with it
+    ++p;                  // increment pointer to get next file
+  }
 }
