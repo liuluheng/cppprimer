@@ -53,6 +53,9 @@ int main()
 
 	// puts elements in v1 into reverse order
 	reverse(v1.begin(), v1.end());  
+  std::ostream_iterator<int> out_iter(cout, " ");
+  copy(v1.begin(), v1.end(), out_iter);
+	cout << endl;
 	v1 = v3;  // restore original data
 
 	// copies elements from v1 into v2 in reverse order; v1 is unchanged
