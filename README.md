@@ -6,7 +6,7 @@ cppprimer code
 10. chapter 10
    * absInt.cc
      for_each transform with lambda
-     ``` c++
+     ```c++
      // pass a lambda to for_each to print each element in vi
      for_each(vi.begin(), vi.end(), [](int i) { cout << i << " "; });
      // replace negative values by their absolute value
