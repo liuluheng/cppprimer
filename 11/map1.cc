@@ -99,5 +99,13 @@ int main()
 	cout << map_it->first;         // prints the key for this element
 	cout << " " << map_it->second; // prints the value of the element
 	++map_it->second;     // ok: we can change the value through an iterator
+  
+  cout << endl;
+  for (auto it : word_count) {
+    cout << it.first << " ";
+    cout << it.second;
+    cout << endl;
+  }
+  cout << endl;
 	return 0;
 }
