@@ -61,10 +61,23 @@ cppprimer code
 11. Chapter 11
    *    map1.cc
 
-        map insert return 
+        map insert return `pair<map<string, size_t>::iterator, bool>`
+        and could not store the same value(a pair)
+  
+   *    multimap.cc
+
+        ```C++
+        // definitions of authors and search_item as above
+        // beg and end denote the range of elements for this author
+        for (auto beg = authors.lower_bound(search_item),
+                  end = authors.upper_bound(search_item);
+             beg != end; ++beg)
+          cout << beg->second << endl; // print each title
+
+        // definitions of authors and search_item as above
+        // pos holds iterators that denote the range of elements for this key
+        for (auto pos = authors.equal_range(search_item);
+             pos.first != pos.second; ++pos.first)
+          cout << pos.first->second << endl; // print each title
 
         ```
-        pair<map<string, size_t>::iterator, bool>
-        ```
-        and do not store the same value(a pair)
-  
