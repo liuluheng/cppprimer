@@ -67,10 +67,13 @@ void preliminaries(vector<string> &v)
 {
 	// process v
 	istream_iterator<string> input(cin), eof;
+  cout << "---" << endl;
 	copy(input, eof, back_inserter(v));
 	sort(v.begin(), v.end(), 
 	     [](const string &a, const string &b) 
 	     { return a.size() < b.size(); });
+	copy(v.begin(), v.end(), ostream_iterator<string>(cout, ","));
+  cout << endl;
 }
 
 // three different ways to return a pair
