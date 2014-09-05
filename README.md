@@ -85,3 +85,21 @@ cppprimer code
    *    unorderedWordCount.cc
 
         unordered_*
+12. Chapter 12
+   *    querymain.cc
+
+        ```C++
+        // open returns void, so we use the comma operator XREF(commaOp)
+        // to check the state of infile after the open
+        if (argc < 2 || !(infile.open(argv[1]), infile)) {
+        }
+        ```
+   *    UP.cc
+        ```C++
+        // up points to an array of ten uninitialized ints
+        unique_ptr<int[]> up(new int[10]);
+        ```
+   *    usealloc*.cc
+
+
+   *    useBlob*.cc
