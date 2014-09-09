@@ -95,6 +95,7 @@ cppprimer code
         }
         ```
    *    UP.cc
+        
         ```C++
         // up points to an array of ten uninitialized ints
         unique_ptr<int[]> up(new int[10]);
