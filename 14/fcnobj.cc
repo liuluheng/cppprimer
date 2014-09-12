@@ -76,7 +76,7 @@ int main() {
 	
 	// bind second argument to less_equal
 	cout << count_if(vec.begin(), vec.end(),
-		             bind(less_equal<int>(), _1, 10));  
+		               bind(less_equal<int>(), _1, 10));  
 	cout << endl;
 	
 	vector<string> svec;
@@ -93,7 +93,6 @@ int main() {
 	cout << count_if(svec.begin(), svec.end(), 
 	                 bind(size_compare, _1, 6))
 	     << endl;
-
 
 	return 0;
 }

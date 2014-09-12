@@ -106,3 +106,19 @@ cppprimer code
    *    useBlob*.cc
 12. Chapter 14
    *    calc.cc
+
+        function<int(int,int)>
+   *    fcnobj.cc
+
+        bind...
+
+   *    newcount-size.cc
+
+        ```C++
+        // use object of type PrintString
+        // to print the contents of words, each one followed by a space
+        for_each(wc, words.end(), PrintString(cout));
+        // use object of type SizeComp to find
+        // the first element whose size() is >= sz
+        auto wc = find_if(words.begin(), words.end(), SizeComp(sz));
+        ```
